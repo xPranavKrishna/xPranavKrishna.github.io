@@ -31,7 +31,7 @@
                     <div class="intro d-felx flex-column justify-content-center mt-3 mb-4">
                         <img class="img1" src="images/avatar.png">
                         <h2 class="name">PRANAV KRISHNA</h2>
-                        <p class="det"><span class="cd-color1">#</span>In love with <span class="cd-color2">coding</span></p>
+                        <p class="det"><span class="cd-color1">#</span>In love with <span class="cd-color2" id="typewriter">coding</span></p>
 
                     </div>
             </div>
@@ -62,6 +62,45 @@
 
         // Create binary rain effect
         setInterval(createBinary, 400);
+
+        // Typewriter effect
+        const words = ['coding', 'learning', 'chaos', 'curiosity', 'universe', 'possibility'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter');
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const delayBetweenWords = 2000;
+
+        function typeWriter() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, delayBetweenWords);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            const speed = isDeleting ? deletingSpeed : typingSpeed;
+            setTimeout(typeWriter, speed);
+        }
+
+        // Start typewriter effect after page loads
+        setTimeout(typeWriter, 1000);
     </script>
 </body>
 </html>
