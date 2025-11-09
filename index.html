@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Krishna</title>
+    <link rel = "icon" href = "images/cool.png"  type = "image/x-icon">
+</head>
+<body>
+    <!-- Floating code snippets background -->
+    <div class="code-bg">
+        <div class="code-line">function buildAwesome() { return creativity + passion; }</div>
+        <div class="code-line">const developer = { name: 'Pranav', skill: 'Full Stack', passion: '∞' };</div>
+        <div class="code-line">while(learning) { skills++; projects.push(newIdea); }</div>
+        <div class="code-line">if (coding) { console.log('Living the dream 🚀'); }</div>
+        <div class="code-line">let success = hardWork * dedication ** consistency;</div>
+    </div>
+
+    <!-- Code symbols floating -->
+    <div class="shape shape1">&lt;/&gt;</div>
+    <div class="shape shape2">{ }</div>
+    <div class="shape shape3">[ ]</div>
+    <div class="shape shape4">( )</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                    <div class="intro d-felx flex-column justify-content-center mt-3 mb-4">
+                        <img class="img1" src="images/avatar.png">
+                        <h2 class="name">PRANAV KRISHNA</h2>
+                        <p class="det"><span class="cd-color1">#</span>In love with <span class="cd-color2">coding</span></p>
+
+                    </div>
+            </div>
+            <div class="col-lg-6 col-12 col-xl-6 col-md-8 m-auto ">
+                <div class="connect-card d-flex flex-column justify-content-center m-3">
+                    <h3 class="connect-text">Connect Me</h3>
+                    <div class="social-card d-felx flex-row">
+                        <a href="https://telegram.me/pranavkrish_na" target="_blank"><img class="tg img-social" src="images/telegram.png"></a>
+                        <a href="https://www.instagram.com/pranavkrish_na/" target="_blank"><img class="insta img-social" src="images/instagram.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create falling binary numbers
+        function createBinary() {
+            const binary = document.createElement('div');
+            binary.className = 'binary';
+            binary.textContent = Math.random() > 0.5 ? '1' : '0';
+            binary.style.left = Math.random() * 100 + '%';
+            binary.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            document.body.appendChild(binary);
+            
+            setTimeout(() => binary.remove(), 7000);
+        }
+
+        // Create binary rain effect
+        setInterval(createBinary, 400);
+    </script>
+</body>
+</html>
